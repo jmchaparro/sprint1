@@ -1,26 +1,63 @@
-* {
+body,
+html {
   margin: 0;
   padding: 0;
+}
+* {
+  box-sizing: border-box;
 }
 
 #container {
   position: relative;
   width: 100%;
+  min-height: 500px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  padding-bottom: 40px;
   height: 100%;
+}
+
+#container .texto {
+  text-align: center;
+  line-height: 1.4em;
+  margin-bottom: 25px;
+  color: #fff;
+  max-width: 500px;
+  font-weight: 300;
+}
+
+#container .boton {
 }
 #container-void {
   height: 360px;
 }
 
 #btn-registrar {
-  padding: 1%;
-  padding-left: 2%;
-  padding-right: 2%;
-  position: absolute;
-  background-color: #38326e;
-  border-radius: 12px;
-  left: 38%;
-  top: 50%;
+  padding: 10px 20px;
+  position: relative;
+  background-color: #64d61a;
+  border-radius: 4px;
+  border: none;
+  margin: 0 auto;
+  width: auto;
+  display: block;
+  border: 2px solid #64d61a;
+}
+
+#btn-registrar:hover {
+  padding: 10px 20px;
+  position: relative;
+  background-color: #64d61a;
+  border-radius: 4px;
+  border: none;
+  margin: 0 auto;
+  width: auto;
+  display: block;
+  border: 2px solid #38326e;
 }
 
 #enlace-registro {
@@ -29,97 +66,11 @@
   font-size: 130%;
 }
 
-#navigation {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: end;
-  width: 100%;
-  height: 50%;
-  background-color: #38326e;
-}
-
 #enlace-navigation {
   margin: 2%;
   text-decoration: none;
   color: white;
   font-size: 120%;
-}
-
-/*Crear la burbuja*/
-#burbuja {
-  width: 7%;
-  height: 10%;
-  border-radius: 50%;
-  background: #fff;
-  opacity: 0.3;
-  position: absolute;
-  bottom: -0;
-  animation: burbujas 3s linear infinite;
-}
-
-#burbuja:nth-child(1) {
-  width: 7%;
-  height: 10%;
-  left: 8%;
-  animation-duration: 3s;
-  animation-delay: 1s;
-}
-
-#burbuja:nth-child(2) {
-  width: 9%;
-  height: 13%;
-  left: 35%;
-  animation-duration: 3s;
-  animation-delay: 5s;
-}
-
-#burbuja:nth-child(3) {
-  width: 10%;
-  height: 14%;
-  left: 65%;
-  animation-duration: 3s;
-  animation-delay: 4s;
-}
-
-#burbuja:nth-child(4) {
-  width: 9%;
-  height: 13%;
-  left: 45%;
-  animation-duration: 3s;
-  animation-delay: 3s;
-}
-
-#burbuja:nth-child(5) {
-  width: 11%;
-  height: 15%;
-  left: 55%;
-  animation-duration: 3s;
-  animation-delay: 2s;
-}
-
-#burbuja:nth-child(6) {
-  width: 10%;
-  height: 14%;
-  left: 75%;
-  animation-duration: 3s;
-  animation-delay: 9s;
-}
-
-#burbuja:nth-child(7) {
-  width: 9%;
-  height: 13%;
-  left: 85%;
-  animation-duration: 3s;
-  animation-delay: 8s;
-}
-
-footer {
-  display: flex;
-  background-color: #38326e;
-  height: 50%;
-  padding: 1%;
-  justify-content: center;
 }
 
 @keyframes burbujas {
@@ -138,23 +89,12 @@ footer {
   }
 }
 
-@media (min-width: 700px) {
-  #btn-registrar {
-    padding: 10px 20px;
-    position: absolute;
-    background-color: #64d61a;
-    border-radius: 4px;
-    left: 44%;
-    top: 54%;
-    border: none;
-  }
-}
-
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
+  background: #38326e;
 }
 
 #navigation {
@@ -168,21 +108,9 @@ body {
 }
 
 #enlace-navigation {
-  margin: 2%;
   text-decoration: none;
   color: white;
-  font-size: 120%;
-}
-
-#container {
-  display: flex;
-  /* flex-direction: row; */
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: beige;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  font-size: 1em;
 }
 
 #container-img {
@@ -190,34 +118,47 @@ body {
 }
 
 #container-form {
-  padding: 5%;
-  min-width: 300px;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
 }
 
 /*estilos del formulario*/
 #form-registro {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-#campo {
-  margin-bottom: 2%;
-  font-size: 110%;
-  padding-left: 9px;
-}
-
-input {
+  display: block;
   width: 90%;
-  height: 40px;
-  border: 1px solid #666;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  position: relative;
+  margin: 25px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(132, 132, 128, 0.25);
+  box-shadow: 5px 5px 15px 5px rgba(132, 132, 128, 0.25);
+  max-width: 400px;
+}
+
+#form-registro #campo {
+  font-size: 1em;
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#form-registro input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: #38326e;
+  font-weight: 300;
 }
 
 #registro {
   margin: 0 auto;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 #btn-submit-form {
@@ -230,18 +171,39 @@ input {
   border: none;
   color: #fff;
   cursor: pointer;
-  margin: 0 auto;
+  margin: 25px auto 10px auto;
+}
+
+#btn-submit-form:hover {
+  border-radius: 4px;
+  padding: 10px 20px;
+  height: 50px;
+  width: 80%;
+  background-color: #64d61a;
+  font-size: 1em;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin: 25px auto 10px auto;
+  border: 2px solid #38326e;
 }
 
 footer {
   display: flex;
   background-color: #38326e;
-  height: 30%;
-  padding: 1%;
   justify-content: center;
   color: #fff;
-  min-height: 80px;
+  min-height: 120px;
   align-items: center;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 0.8em;
+  position: relative;
+  width: 100%;
+}
+
+.item.boton {
+  display: flex;
 }
 
 @media (max-width: 680px) {
