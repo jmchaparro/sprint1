@@ -111,10 +111,11 @@ body {
   background-color: #38326e;
 }
 
-#enlace-navigation {
+#navigation a {
   text-decoration: none;
   color: white;
   font-size: 1em;
+  padding: 20px;
 }
 
 #container-img {
