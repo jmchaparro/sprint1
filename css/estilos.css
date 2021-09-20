@@ -6,7 +6,11 @@ html {
 * {
   box-sizing: border-box;
 }
-
+h1 {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  color: #222;
+}
 #container {
   position: relative;
   width: 100%;
